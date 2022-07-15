@@ -1,0 +1,1 @@
+[{"procur_codigo":5000,"procurcod_sigla":"CE/LP-T49-049/2022","procur_fecha_inicio":"2022-01-24T04:00:00.000Z","procur_fecha_final":"2022-02-01T04:00:00.000Z"}]
