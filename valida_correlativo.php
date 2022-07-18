@@ -6,10 +6,13 @@ $fecha_ram	= date("Ymd");
 $fecha 		= date("Y-m-d");
 
 $idusuario_ss = $_SESSION['idusuario_ss'];
-$idnombre_ss = $_SESSION['idnombre_ss'];
+$idnombre_ss  = $_SESSION['idnombre_ss'];
 
-$correlativo = $_POST['correlativo'];
-$origen      = $_POST['origen'];
+$correlativo_f = $_POST['correlativo'];
+$correlativo   = $link->real_escape_string($correlativo_f);
+
+$origen_f     = $_POST['origen'];
+$origen       = $link->real_escape_string($origen_f);
 
 if ($correlativo != "") {
     

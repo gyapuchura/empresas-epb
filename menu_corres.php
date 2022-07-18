@@ -58,7 +58,7 @@
 							<li><a href="nueva_hoja_ruta.php">NUEVA HOJA DE RUTA</a></li>
 							<li><a href="para_modificar_hr.php">MODIFICAR HOJA DE RUTA</a></li>
 		<!--   <li><a href="para_adjuntar.php">ADJUNTAR DOCUMENTO</a></li> -->  
-							<li><a href="historico.php">HISTORICO</a></li>
+		<!--   <li><a href="historico.php">HISTORICO</a></li>  --> 
 		<?php
 		////////	/****** MODIFICAR DOCENTE ******/			    
 		$sql = "SELECT perfil  from usuarios  where idusuario = '$idusuario_ss' and perfil = '$perfil_ss' ";

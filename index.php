@@ -88,7 +88,9 @@
             </div>
 			<div class="col-sm-4"></div>
             <div class="col-sm-4">
-            <h1><a class="tg-btn"  href="public.php" >SEGUIMIENTO</a></h1>
+            <h1>
+<!--              <a class="tg-btn"  href="public.php" >SEGUIMIENTO</a>   -->
+            </h1>
             </div>
         </div>
 </div>

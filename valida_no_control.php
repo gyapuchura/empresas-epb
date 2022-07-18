@@ -6,9 +6,10 @@ $fecha_ram	= date("Ymd");
 $fecha 		= date("Y-m-d");
 
 $idusuario_ss = $_SESSION['idusuario_ss'];
-$idnombre_ss = $_SESSION['idnombre_ss'];
+$idnombre_ss  = $_SESSION['idnombre_ss'];
 
-$no_control = $_POST['no_control'];
+$no_control_f = $_POST['no_control'];
+$no_control   = $link->real_escape_string($no_control_f);
 
 if ($no_control != "") {
 

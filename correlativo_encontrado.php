@@ -1,10 +1,9 @@
 <?php include("cabf.php");?>
 <?php include("inc.config.php");?>
 <?php
-
-date_default_timezone_set('UTC');
+date_default_timezone_set('America/La_Paz');
 $fecha_ram				= date("Ymd");
-$fecha 					= date("Y-m-d");
+$fecha 					  = date("Y-m-d");
 
 $idusuario_ss  =  $_SESSION['idusuario_ss'];
 $idnombre_ss   =  $_SESSION['idnombre_ss'];
@@ -123,7 +122,11 @@ $rowus = mysqli_fetch_array($resultus);
   <div class="col-md-2"><h4>NUMERO DE CONTROL:</h4></div>
   <div class="col-md-2"><h4 class="text-muted"><?php echo $row1[6];?></h4></div>
   <div class="col-md-2"><h4>FECHA:</h4></div>
-  <div class="col-md-2"><h4 class="text-muted"><?php echo $row1[7];?></h4></div>
+  <div class="col-md-2"><h4 class="text-muted"><?php 
+  $fecha_corres = explode('-',$row1[7]);
+  $f_corres    = $fecha_corres[2].'/'.$fecha_corres[1].'/'.$fecha_corres[0];
+  echo $f_corres; ?>
+  </h4></div>
 </div>
 </div>
 
@@ -179,13 +182,18 @@ $rowd = mysqli_fetch_array($resultd);
 <?php echo $rowd[0];?> <?php echo $rowd[1];?> <?php echo $rowd[2];?>
       </td>
       <td><?php echo $row[5]?></td>
-      <td><?php echo $row[6]?></td>
+      <td><?php 
+            $fecha_deriv = explode('-',$row[6]);
+            $f_deriva    = $fecha_deriv[2].'/'.$fecha_deriv[1].'/'.$fecha_deriv[0];
+      echo $f_deriva; ?></td>
       <td>
 	  <?php
 	  if ($row[7] =="1111-11-11") {
 		echo "POR RECIBIR";
 	  } else {
-		echo $row[7]." - ".$row[8];
+      $fecha_elab1 = explode('-',$row[7]);
+      $f_recepcion    = $fecha_elab1[2].'/'.$fecha_elab1[1].'/'.$fecha_elab1[0];
+    echo $f_recepcion." - ".$row[8];
 	  }
 	  ?>
 	  </td>
@@ -223,20 +231,5 @@ $rowd = mysqli_fetch_array($resultd);
 	<script src="js/jquery.dataTables.min.js"></script>
 	<script src="js/script.js"></script>
 	<script src="js/dataTables.bootstrap.min.js"></script>
-	<script>
-	function agregaform(datos){
-d=datos.split('||');
-
-$('#codigo').val(d[0]);
-$('#tematica').val(d[1]);
-$('docente').val(d[2]);
-$('#adm').val(d[5]);
-$('#ejec').val(d[6]);
-$('#contrato').val(d[9]);
-$('#preventivo').val(d[8]);
-$('#creador').val(d[7]);
-
-}
-	</script>
 </body>
 </html>

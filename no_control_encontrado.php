@@ -122,7 +122,10 @@ $rowus = mysqli_fetch_array($resultus);
   <div class="col-md-2"><h4>NUMERO DE CONTROL:</h4></div>
   <div class="col-md-2"><h4 class="text-muted"><?php echo $row1[6];?></h4></div>
   <div class="col-md-2"><h4>FECHA:</h4></div>
-  <div class="col-md-2"><h4 class="text-muted"><?php echo $row1[7];?></h4></div>
+  <div class="col-md-2"><h4 class="text-muted"><?php 
+       $fecha_corres = explode('-',$row1[7]);
+       $f_corres    = $fecha_corres[2].'/'.$fecha_corres[1].'/'.$fecha_corres[0];
+  echo $f_corres; ?></h4></div>
 </div>
 </div>
 
@@ -192,14 +195,11 @@ $rowd = mysqli_fetch_array($resultd);
 	  if ($row[7] =="1111-11-11") {
 		echo "POR RECIBIR";
 	  } else {
-
        
         $fecha_elab1 = explode('-',$row[7]);
         $f_deriva    = $fecha_elab1[2].'/'.$fecha_elab1[1].'/'.$fecha_elab1[0];
-        echo $f_deriva;
      
-
-		echo $row[7]." - ".$row[8];
+		echo $f_deriva." - ".$row[8];
 	  }
 	  ?>
 	  </td>

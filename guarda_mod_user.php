@@ -14,7 +14,8 @@ $idnombre_adm_ss   =  $_SESSION['idnombre_adm_ss'];
 $gestion     = date("Y");
 
 $usuario   	 = $_POST['usuario'];
-$password	 = $_POST['password'];
+$pass   	 = $_POST['password'];
+$password    = sha1($pass);
 $condicion   = $_POST['condicion'];
 $perfil      = $_POST['perfil'];
 $idcargo     = $_POST['idcargo'];

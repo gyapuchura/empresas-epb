@@ -6,8 +6,13 @@ session_start();
 $ip		 	= $_SERVER['REMOTE_ADDR'];
 $fecha 		= date("Y-m-d H:i:s");
 
-$usuario 	= $_POST['usuario'];
-$password 	= $_POST['password'];
+$usuario_f 	= $_POST['usuario'];
+$pass_f   	= $_POST['password'];
+
+$usuario = $link->real_escape_string($usuario_f);
+$pass    = $link->real_escape_string($pass_f);
+
+$password   = sha1($pass);
 
 if($usuario == "" or $password == ""){
 

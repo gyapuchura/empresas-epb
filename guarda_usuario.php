@@ -14,7 +14,9 @@ $ci         	= $_POST['ci'];
 $exp         	= $_POST['exp'];
 
 $usuario        = $_POST['usuario'];
-$password      	= $_POST['password'];
+$pass        	= $_POST['password'];
+$password       = sha1($pass);
+
 $perfil     	= $_POST['perfil'];
 
 $idarea         = $_POST['idarea'];
