@@ -85,40 +85,40 @@ $rowus = mysqli_fetch_array($resultus);?>
 <div class="row">
   <div class="col-md-6"><h4>HOJAS DE RUTA DIARIAS:</h4><h4 class="text-muted">&nbsp;</h4></div>
   <div class="col-md-6"><h4>
-  <a href="examples/areaspline/hojas_ruta_diaria.php" target="_blank" onClick="window.open(this.href, this.target, 'width=1000,height=700,scrollbars=YES'); return false;">
+  <a href="estadisticas/hojas_ruta_diaria.php" target="_blank" onClick="window.open(this.href, this.target, 'width=1000,height=700,scrollbars=YES'); return false;">
     MOSTRAR REPORTE </a></h4></div>
 </div>
 
 <div class="row">
   <div class="col-md-6"><h4>REPORTE HOJAS DE RUTA USUARIOS:</h4><h4 class="text-muted">&nbsp;</h4></div>
   <div class="col-md-6"><h4>
-  <a href="examples/column-basic/cantidad_usuario.php" target="_blank" onClick="window.open(this.href, this.target, 'width=1200,height=700,scrollbars=YES'); return false;">
+  <a href="estadisticas/cantidad_usuario.php" target="_blank" onClick="window.open(this.href, this.target, 'width=1200,height=700,scrollbars=YES'); return false;">
     MOSTRAR REPORTE </a></h4></div>
 </div>
 
  <div class="row">
   <div class="col-md-6"><h4>POR ESTADO DE HOJAS DE RUTA:</h4><h4 class="text-muted">&nbsp;</h4></div>
   <div class="col-md-6"><h4>
-  <a href="examples/3d-pie/por_estado_hr.php" target="_blank" onClick="window.open(this.href, this.target, 'width=1000,height=700,scrollbars=YES'); return false;">
+  <a href="estadisticas/por_estado_hr.php" target="_blank" onClick="window.open(this.href, this.target, 'width=1000,height=700,scrollbars=YES'); return false;">
     MOSTRAR REPORTE </a>  </h4></div>
 </div>
 
 <div class="row">
   <div class="col-md-6"><h4>CONTROL INTERNO:</h4><h4 class="text-muted">&nbsp;</h4></div>
   <div class="col-md-6"><h4>
-  <a href="examples/3d-pie/control_interno.php" target="_blank" onClick="window.open(this.href, this.target, 'width=1000,height=700,scrollbars=YES'); return false;">
+  <a href="estadisticas/control_interno.php" target="_blank" onClick="window.open(this.href, this.target, 'width=1000,height=700,scrollbars=YES'); return false;">
     MOSTRAR REPORTE </a></h4></div>
 </div>
 <div class="row">
   <div class="col-md-6"><h4>CONTROL EXTERNO POSTERIOR:</h4><h4 class="text-muted">&nbsp;</h4></div>
   <div class="col-md-6"><h4>
-  <a href="examples/3d-pie/control_externo.php" target="_blank" onClick="window.open(this.href, this.target, 'width=1000,height=700,scrollbars=YES'); return false;">
+  <a href="estadisticas/control_externo.php" target="_blank" onClick="window.open(this.href, this.target, 'width=1000,height=700,scrollbars=YES'); return false;">
     MOSTRAR REPORTE </a></h4></div>
 </div>
 <div class="row">
   <div class="col-md-6"><h4>OTROS TRÁMITES ATENDIDOS POR LA SCEP:</h4><h4 class="text-muted">&nbsp;</h4></div>
   <div class="col-md-6"><h4>
-  <a href="examples/3d-pie/otras_hr.php" target="_blank" onClick="window.open(this.href, this.target, 'width=1000,height=700,scrollbars=YES'); return false;">
+  <a href="estadisticas/otras_hr.php" target="_blank" onClick="window.open(this.href, this.target, 'width=1000,height=700,scrollbars=YES'); return false;">
     MOSTRAR REPORTE </a></h4></div>
 </div>
 

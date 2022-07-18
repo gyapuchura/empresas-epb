@@ -6,9 +6,11 @@ $fecha_ram	= date("Ymd");
 $fecha 		= date("Y-m-d");
 
 $idusuario_ss = $_SESSION['idusuario_ss'];
-$idnombre_ss = $_SESSION['idnombre_ss'];
+$idnombre_ss  = $_SESSION['idnombre_ss'];
 
-$codigo = $_POST['codigo'];
+$codigo_f = $_POST['codigo'];
+
+$codigo   = $link->real_escape_string($codigo_f);
 
 if ($codigo != "") {
 

@@ -1,6 +1,8 @@
 <?php include("inc.config.php");
 
-      $b = $_POST['b'];
+      $busca = $_POST['b'];
+
+      $b = $link->real_escape_string($busca);
 
             $sql =" SELECT idcorres, gestion, correlativo, idusuario, referencia, procedencia, ";
             $sql.=" no_control, fecha_corres, anexo, idestado FROM corres ";

@@ -12,7 +12,7 @@ $perfil_ss     =  $_SESSION['perfil_ss'];
 $gestion       =  date("Y");
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="utf-8">
 <title>SUBCONTRALORIA EMPRESAS PUBLICAS</title>
@@ -126,20 +126,15 @@ $rowus = mysqli_fetch_array($resultus);
 </div>
 </div>
 </form>
-
 <div class="row">
 <div class="col-md-12"><h3> </h3></div>
 </div>
-
 <div class="box-area">
 <div class="row">
 <div class="col-md-3"><h3> BUSQUEDA POR REFERENCIA: </h3></div>
-<div class="col-md-9"><h3 class="text-muted">
-
-<input type="text" class="form-control" placeholder=" " id="busqueda" />
-
+<div class="col-md-9">
+<input type="text" class="form-control" id="busqueda" />
 <div id="resultado"></div>
-
 </div>
 </div>
 </div>
