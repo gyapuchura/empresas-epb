@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.6deb4+deb9u2
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
--- Servidor: localhost:3306
--- Tiempo de generación: 11-07-2022 a las 11:12:45
--- Versión del servidor: 10.1.48-MariaDB-0+deb9u2
--- Versión de PHP: 7.0.33-0+deb9u12
+-- Servidor: localhost:8889
+-- Tiempo de generación: 18-07-2022 a las 02:53:34
+-- Versión del servidor: 5.7.34
+-- Versión de PHP: 7.4.21
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -145,67 +146,69 @@ INSERT INTO `caracter` (`idcaracter`, `caracter`) VALUES
 CREATE TABLE `cargo` (
   `idcargo` int(11) NOT NULL,
   `idarea` int(11) NOT NULL,
-  `cargo` text NOT NULL
+  `cargo` text NOT NULL,
+  `item` varchar(45) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `cargo`
 --
 
-INSERT INTO `cargo` (`idcargo`, `idarea`, `cargo`) VALUES
-(1, 1, 'GERENTE DE CAPACITACION'),
-(2, 1, 'OFICIAL DE ATENCION AL USUARIO'),
-(3, 1, 'OFICIAL DE PROMOCION'),
-(4, 1, 'RESPONSABLE DE CAPACITACION Y ESPECIALIZACION'),
-(5, 1, 'ENCARGADO DE CAPACITACIÓN Y ESPECIALIZACIÓN'),
-(6, 1, 'AUXILIAR DE CAPACITACIÓN Y ESPECIALIZACIÓN'),
-(7, 1, 'RESPONSABLE DE CAPACITACION VIRTUAL '),
-(8, 1, 'ENCARGADO DE DESARROLLO DE SOFTWARE EDUCATIVO'),
-(9, 1, 'ENCARGADO DE MULTIMEDIA'),
-(10, 1, 'RESPONSABLE DE CONTROL SOCIAL'),
-(11, 1, 'ENCARGADO DE CONTROL SOCIAL'),
-(12, 1, 'AUXILIAR DE CONTROL SOCIAL'),
-(13, 1, 'CENCAP (RA)'),
-(14, 1, 'AUXILIAR'),
-(15, 26, 'CONTRALOR GENERAL DEL ESTADO'),
-(18, 27, 'SUBCONTRALOR GENERAL'),
-(19, 28, 'SUBCONTRALOR DE SERVICIOS LEGALES'),
-(20, 29, 'SUBCONTRALOR DE AUDITORIAS TÉCNICAS'),
-(21, 1, 'ASISTENTE DE GERENCIA'),
-(22, 4, 'GERENTE NACIONAL ADMINISTRATIVO FINANCIERO'),
-(23, 1, 'OFICIAL DE CAPACITACION - 1'),
-(24, 1, 'OFICIAL DE CAPACITACION - 2'),
-(25, 1, 'OFICIAL DE CAPACITACION - 3'),
-(26, 1, 'OFICIAL DE CAPACITACION - 4'),
-(27, 1, 'OFICIAL DE CAPACITACION - 5'),
-(28, 1, 'OFICIAL DE CAPACITACION - 6'),
-(29, 1, 'AUXILIAR DE CAPACITACION'),
-(30, 4, 'SUBGERENTE DE FINANZAS'),
-(31, 2, 'SECRETARIA GENERAL'),
-(32, 4, 'RESPONSABLE DEL PROCESO DE CONTRATACIÓN DE APOYO  NACIONAL A LA PRODUCCIÓN Y EMPLEO – \r\nRPA'),
-(33, 1, 'ENCARGADO DE GESTION INSTITUCIONAL'),
-(34, 1, 'OFICIAL DEL CENCAP - RRHH'),
-(35, 1, 'GNAF (RA)'),
-(36, 1, 'LEGAL (RA)'),
-(37, 4, 'OFICIAL DE CAJA'),
-(38, 1, 'OFICIAL DE CAPACITACION - 7'),
-(39, 1, 'OFICIAL DE CAPACITACION - 8'),
-(40, 4, 'OFICIAL ADMINISTRATIVO'),
-(41, 12, 'SUBCONTRALOR DE EMPRESAS PÚBLICAS'),
-(42, 12, 'GERENTE DE AUDITORÍA DE EMPRESAS PÚBLICAS'),
-(43, 12, 'SUPERVISOR B'),
-(44, 12, 'SUPERVISOR B'),
-(45, 12, 'SUPERVISOR B'),
-(46, 12, 'SUPERVISOR B'),
-(47, 12, 'SUPERVISOR B'),
-(48, 12, 'SUPERVISOR C'),
-(49, 12, 'SUPERVISOR C'),
-(50, 12, 'SUPERVISOR C'),
-(51, 12, 'SUPERVISOR C'),
-(52, 12, 'ASISTENTE ADMINISTRATIVO'),
-(53, 12, 'AUXILIAR'),
-(54, 12, 'GERENTE PRINCIPAL DE AUDITORÍA'),
-(55, 12, 'SUBCONTRALOR DE EMPRESAS PÚBLICAS a.i.');
+INSERT INTO `cargo` (`idcargo`, `idarea`, `cargo`, `item`) VALUES
+(1, 1, 'GERENTE DE CAPACITACION', ''),
+(2, 1, 'OFICIAL DE ATENCION AL USUARIO', ''),
+(3, 1, 'OFICIAL DE PROMOCION', ''),
+(4, 1, 'RESPONSABLE DE CAPACITACION Y ESPECIALIZACION', ''),
+(5, 1, 'ENCARGADO DE CAPACITACIÓN Y ESPECIALIZACIÓN', ''),
+(6, 1, 'AUXILIAR DE CAPACITACIÓN Y ESPECIALIZACIÓN', ''),
+(7, 1, 'RESPONSABLE DE CAPACITACION VIRTUAL ', ''),
+(8, 1, 'ENCARGADO DE DESARROLLO DE SOFTWARE EDUCATIVO', ''),
+(9, 1, 'ENCARGADO DE MULTIMEDIA', ''),
+(10, 1, 'RESPONSABLE DE CONTROL SOCIAL', ''),
+(11, 1, 'ENCARGADO DE CONTROL SOCIAL', ''),
+(12, 1, 'AUXILIAR DE CONTROL SOCIAL', ''),
+(13, 1, 'CENCAP (RA)', ''),
+(14, 1, 'AUXILIAR', ''),
+(15, 26, 'CONTRALOR GENERAL DEL ESTADO', ''),
+(18, 27, 'SUBCONTRALOR GENERAL', ''),
+(19, 28, 'SUBCONTRALOR DE SERVICIOS LEGALES', ''),
+(20, 29, 'SUBCONTRALOR DE AUDITORIAS TÉCNICAS', ''),
+(21, 1, 'ASISTENTE DE GERENCIA', ''),
+(22, 4, 'GERENTE NACIONAL ADMINISTRATIVO FINANCIERO', ''),
+(23, 1, 'OFICIAL DE CAPACITACION - 1', ''),
+(24, 1, 'OFICIAL DE CAPACITACION - 2', ''),
+(25, 1, 'OFICIAL DE CAPACITACION - 3', ''),
+(26, 1, 'OFICIAL DE CAPACITACION - 4', ''),
+(27, 1, 'OFICIAL DE CAPACITACION - 5', ''),
+(28, 1, 'OFICIAL DE CAPACITACION - 6', ''),
+(29, 1, 'AUXILIAR DE CAPACITACION', ''),
+(30, 4, 'SUBGERENTE DE FINANZAS', ''),
+(31, 2, 'SECRETARIA GENERAL', ''),
+(32, 4, 'RESPONSABLE DEL PROCESO DE CONTRATACIÓN DE APOYO  NACIONAL A LA PRODUCCIÓN Y EMPLEO – \r\nRPA', ''),
+(33, 1, 'ENCARGADO DE GESTION INSTITUCIONAL', ''),
+(34, 1, 'OFICIAL DEL CENCAP - RRHH', ''),
+(35, 1, 'GNAF (RA)', ''),
+(36, 1, 'LEGAL (RA)', ''),
+(37, 4, 'OFICIAL DE CAJA', ''),
+(38, 1, 'OFICIAL DE CAPACITACION - 7', ''),
+(39, 1, 'OFICIAL DE CAPACITACION - 8', ''),
+(40, 4, 'OFICIAL ADMINISTRATIVO', ''),
+(41, 12, 'SUBCONTRALOR DE EMPRESAS PÚBLICAS', '235'),
+(42, 12, 'GERENTE DE AUDITORÍA DE EMPRESAS PÚBLICAS', '238'),
+(43, 12, 'SUPERVISOR B', '243'),
+(44, 12, 'SUPERVISOR B', '239'),
+(45, 12, 'SUPERVISOR B', '240'),
+(46, 12, 'SUPERVISOR B', '241'),
+(47, 12, 'SUPERVISOR B', '242'),
+(48, 12, 'SUPERVISOR C', '244'),
+(49, 12, 'SUPERVISOR C', '245'),
+(50, 12, 'SUPERVISOR C', '246'),
+(51, 12, 'SUPERVISOR C', '332'),
+(52, 12, 'ASISTENTE ADMINISTRATIVO', '236'),
+(53, 12, 'AUXILIAR', '237'),
+(54, 12, 'GERENTE PRINCIPAL DE AUDITORÍA', ''),
+(55, 12, 'SUBCONTRALOR DE EMPRESAS PÚBLICAS a.i.', ''),
+(56, 33, 'SUNCONTRALORA DEL NIVEL CENTRAL', '');
 
 -- --------------------------------------------------------
 
@@ -523,6 +526,29 @@ INSERT INTO `corres` (`idcorres`, `gestion`, `correlativo`, `origen`, `idusuario
 (222, '2022', 326, 'INTERNA', 2, 'CIERRE DE AUDITORIA EN EL SISTEMA CONAUD GESTIÓN 2021', 'SCG/CI-202/2022', '326', '2022-07-07', 'FJS. 138', 2, 'SCEP-INT-326/2022', 19, 3, '1111-11-11', ' ', NULL, NULL, NULL),
 (223, '2022', 327, 'INTERNA', 2, 'REMITE NOTA DE SEMAPA CITE SEM.GG.CAR.N°1059/2022 - REGISTRO DE CONTRATOS POR EXCEPCIÓN', 'Servicio Municipal de Agua Potable y Alcantarillado - SEMAPA (GDC/CI-1107/2022)', '16536', '2022-07-07', 'FJS. 27; CD. 1', 2, 'SCEP-INT-327/2022', 19, 3, '1111-11-11', ' ', NULL, NULL, NULL),
 (224, '2022', 780, 'EXTERNA', 3, 'REMITE INFORME Y PAPELES DE TRABAJO DE LA AUD. DE CONFIABILIDAD - GESTIÓN 2021', 'EMPRESA TARIJEÑA DEL GAS - EMTAGAS', '16623', '2022-07-08', 'FJS. 1; ARCHIVADORES 23', 2, 'SCEP-EXT-780/2022', 1, 3, '1111-11-11', ' ', NULL, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `cubierta`
+--
+
+CREATE TABLE `cubierta` (
+  `idcubierta` int(11) NOT NULL,
+  `cubierta` varchar(45) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `cubierta`
+--
+
+INSERT INTO `cubierta` (`idcubierta`, `cubierta`) VALUES
+(1, 'ENGRAMPADO'),
+(2, 'ANILLADO'),
+(3, 'EMPASTADO'),
+(4, 'ENCUADERNADO'),
+(5, 'FOLDER'),
+(6, 'LEGAJO');
 
 -- --------------------------------------------------------
 
@@ -1127,6 +1153,38 @@ INSERT INTO `estructura_org` (`idestructura_org`, `idlegajo`, `correlativo`, `de
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `form_archivo`
+--
+
+CREATE TABLE `form_archivo` (
+  `idform_archivo` int(11) NOT NULL,
+  `correlativo` int(11) NOT NULL,
+  `codigo` varchar(45) NOT NULL,
+  `idempresa` int(11) NOT NULL,
+  `idusuario` int(11) NOT NULL,
+  `fecha_form` date NOT NULL,
+  `gestion` varchar(45) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `form_archivo`
+--
+
+INSERT INTO `form_archivo` (`idform_archivo`, `correlativo`, `codigo`, `idempresa`, `idusuario`, `fecha_form`, `gestion`) VALUES
+(1, 1, 'SCEP-EPSA-COBIJA-1/2022', 1, 1, '2022-07-11', '2022'),
+(2, 2, 'SCEP-GERES-2/2022', 2, 1, '2022-07-11', '2022'),
+(3, 3, 'SCEP-EMAVRA-3/2022', 3, 1, '2022-07-11', '2022'),
+(4, 4, 'SCEP-OFEP-4/2022', 5, 1, '2022-07-11', '2022'),
+(5, 5, 'SCEP-EMSA-5/2022', 4, 1, '2022-07-11', '2022'),
+(6, 6, 'SCEP-EBIH-6/2022', 6, 1, '2022-07-11', '2022'),
+(7, 7, 'SCEP-SAMAPA-7/2022', 8, 1, '2022-07-11', '2022'),
+(8, 8, 'SCEP-AAPOS-8/2022', 9, 1, '2022-07-12', '2022'),
+(9, 9, 'SCEP-DAB-9/2022', 10, 1, '2022-07-12', '2022'),
+(10, 10, 'SCEP-ENDE-10/2022', 58, 1, '2022-07-13', '2022');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `historico_hr`
 --
 
@@ -1569,6 +1627,46 @@ INSERT INTO `instruccion` (`idinstruccion`, `instruccion`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `item_archivo`
+--
+
+CREATE TABLE `item_archivo` (
+  `iditem_archivo` int(11) NOT NULL,
+  `idform_archivo` int(11) NOT NULL,
+  `idempresa` int(11) NOT NULL,
+  `correlativo` varchar(45) NOT NULL,
+  `codigo` varchar(45) DEFAULT NULL,
+  `idserie_documental` int(11) NOT NULL,
+  `iddepartamento` int(11) NOT NULL,
+  `no_caja` varchar(45) NOT NULL,
+  `fecha_despacho` date DEFAULT NULL,
+  `fecha_hr` date DEFAULT NULL,
+  `no_tomo` varchar(45) DEFAULT NULL,
+  `contenido` text,
+  `no_fojas` varchar(45) DEFAULT NULL,
+  `idcubierta` int(11) DEFAULT NULL,
+  `cantidad` varchar(45) DEFAULT NULL,
+  `descripcion` text,
+  `observaciones` varchar(45) DEFAULT NULL,
+  `fecha_arch` date DEFAULT NULL,
+  `idusuario_arch` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `item_archivo`
+--
+
+INSERT INTO `item_archivo` (`iditem_archivo`, `idform_archivo`, `idempresa`, `correlativo`, `codigo`, `idserie_documental`, `iddepartamento`, `no_caja`, `fecha_despacho`, `fecha_hr`, `no_tomo`, `contenido`, `no_fojas`, `idcubierta`, `cantidad`, `descripcion`, `observaciones`, `fecha_arch`, `idusuario_arch`) VALUES
+(1, 1, 1, '1', 'SCEP-EPSA-COBIJA-CORRESP-1/2022', 1, 2, 'CAJA 1 ', '2022-07-01', '2022-07-05', 'TOMO 1', 'CONTENIDO O NOMBRE DEL DOCUMENTCONTENIDO O NOMBRE DEL DOCUMENTCONTENIDO O NOMBRE DEL DOCUMENT', '24', 1, '1', 'DESCRIPCIÓN:DESCRIPCIÓN:DESCRIPCIÓN:', 'ORIGINAL', '2022-07-12', 1),
+(2, 1, 1, '2', 'SCEP-EPSA-COBIJA-CORRESP-2/2022', 2, 3, 'CAJA 1 ', '2022-07-01', '2022-07-13', 'TOMO 1', 'CONTENIDO O NOMBRE DEL DOCUMENTO:CONTENIDO O NOMBRE ', '24', 1, '1', 'DESCRIPCIÓN:DESCRIPCIÓN:DESCRIPCIÓN:', 'ORIGINAL', '2022-07-12', 1),
+(3, 1, 1, '3', 'SCEP-EPSA-COBIJA-INF-3/2022', 1, 3, 'CAJA 1 ', '2022-07-05', '2022-07-12', 'TOMO 1', 'CONTENIDO O NOMBRE DEL DOCUMENTO', '22', 2, '1', 'DESCRIPCIÓN:DESCRIPCIÓN:DESCRIPCIÓN:', 'ORIGINAL', '2022-07-12', 1),
+(4, 1, 1, '4', 'SCEP-EPSA-COBIJA-INF-4/2022', 1, 4, 'CAJA 1 ', '2022-07-12', '2022-07-13', 'TOMO 1', 'CONTENIDO O NOMBRE DEL DOCUMENTO', '12', 2, '1', 'DESCRIPCIÓNDESCRIPCIÓNDESCRIPCIÓN', 'ORIGINAL', '2022-07-13', 1),
+(5, 1, 1, '5', 'SCEP-EPSA-COBIJA-CORRESP-5/2022', 2, 3, 'CAJA 1 ', '2022-07-05', '2022-07-12', 'TOMO 1', 'CONTENIDO O NOMBRE DEL DOCUMENTO', '12', 2, '1', 'DESCRIPCIÓN', 'ORIGINAL', '2022-07-13', 1),
+(6, 3, 3, '1', 'SCEP-EMAVRA-CORRESP-1/2022', 2, 3, 'CAJA 1 ', '2022-07-05', '2022-07-08', 'TOMO 1', 'CONTENIDO O NOMBRE DEL DOCUMENTO', '23', 1, '2', 'DESCRIPCIÓN', 'ORIGINAL', '2022-07-13', 1);
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `legajo`
 --
 
@@ -1607,7 +1705,8 @@ INSERT INTO `legajo` (`idlegajo`, `correlativo`, `idusuario`, `codigo`, `idempre
 (18, 18, 1, 'SCEP-LEGP-18/2021', 19, 'VERSIÓN 1', '2021'),
 (19, 19, 1, 'SCEP-LEGP-19/2021', 20, 'VERSIÓN 1', '2021'),
 (20, 20, 1, 'SCEP-LEGP-20/2021', 21, 'VERSIÓN 1', '2021'),
-(21, 21, 1, 'SCEP-LEGP-21/2021', 22, 'VERSIÓN 1', '2021');
+(21, 21, 1, 'SCEP-LEGP-21/2021', 22, 'VERSIÓN 1', '2021'),
+(22, 1, 1, 'SCEP-LEGP-1/', 1, '', '');
 
 -- --------------------------------------------------------
 
@@ -1809,7 +1908,30 @@ INSERT INTO `log_login` (`idlog_login`, `usuario`, `fecha`, `fecha_hora`, `ip`, 
 (154, 'pgarcia', '2022-07-11', '2022-07-11 09:07:31', '172.16.11.134', 'OPEN'),
 (155, 'pmamani', '2022-07-11', '2022-07-11 10:04:04', '172.16.45.124', 'OPEN'),
 (156, 'lyapuchura', '2022-07-11', '2022-07-11 10:28:28', '172.16.45.128', 'OPEN'),
-(157, 'nvelasquez', '2022-07-11', '2022-07-11 10:48:18', '172.16.11.133', 'OPEN');
+(157, 'nvelasquez', '2022-07-11', '2022-07-11 10:48:18', '172.16.11.133', 'OPEN'),
+(158, 'lyapuchura', '2022-07-11', '2022-07-11 21:19:50', '::1', 'OPEN'),
+(159, 'lyapuchura', '2022-07-12', '2022-07-12 15:58:53', '::1', 'OPEN'),
+(160, 'lyapuchura', '2022-07-12', '2022-07-12 16:03:37', '::1', 'OPEN'),
+(161, 'lyapuchura', '2022-07-13', '2022-07-13 00:18:39', '::1', 'OPEN'),
+(162, 'lyapuchura', '2022-07-13', '2022-07-13 15:53:55', '::1', 'OPEN'),
+(163, 'lyapuchura', '2022-07-13', '2022-07-13 18:35:08', '::1', 'OPEN'),
+(164, 'lyapuchura', '2022-07-13', '2022-07-13 20:51:08', '::1', 'OPEN'),
+(165, 'lyapuchura', '2022-07-14', '2022-07-14 03:31:02', '::1', 'OPEN'),
+(166, 'lyapuchura', '2022-07-14', '2022-07-14 16:46:39', '::1', 'OPEN'),
+(167, 'lyapuchura', '2022-07-14', '2022-07-14 18:12:45', '::1', 'OPEN'),
+(168, 'lyapuchura', '2022-07-14', '2022-07-14 19:59:54', '::1', 'OPEN'),
+(169, 'lyapuchura', '2022-07-14', '2022-07-14 21:37:24', '::1', 'OPEN'),
+(170, 'lyapuchura', '2022-07-17', '2022-07-17 20:31:26', '::1', 'OPEN'),
+(171, 'fchoque', '2022-07-17', '2022-07-17 21:02:03', '::1', 'OPEN'),
+(172, 'lyapuchura', '2022-07-17', '2022-07-17 21:03:56', '::1', 'OPEN'),
+(173, 'lyapuchura', '2022-07-17', '2022-07-17 21:05:04', '::1', 'OPEN'),
+(174, 'lyapuchura', '2022-07-17', '2022-07-17 21:24:25', '::1', 'OPEN'),
+(175, 'lyapuchura', '2022-07-17', '2022-07-17 21:31:03', '::1', 'OPEN'),
+(176, 'osuarez', '2022-07-17', '2022-07-17 21:38:47', '::1', 'OPEN'),
+(177, 'lyapuchura', '2022-07-17', '2022-07-17 21:39:30', '::1', 'OPEN'),
+(178, 'lyapuchura', '2022-07-17', '2022-07-17 22:08:14', '::1', 'OPEN'),
+(179, 'lyapuchura', '2022-07-17', '2022-07-17 22:36:11', '::1', 'OPEN'),
+(180, 'lyapuchura', '2022-07-18', '2022-07-18 02:45:33', '::1', 'OPEN');
 
 -- --------------------------------------------------------
 
@@ -1838,7 +1960,14 @@ INSERT INTO `log_login_failure` (`idlog_login_failure`, `usuario`, `password`, `
 (5, 'wvargas', '5999-1S', '2022-06-29', '2022-06-29 16:38:14', '172.16.11.132'),
 (6, 'aortega', '1411305', '2022-07-05', '2022-07-05 14:57:32', '172.16.45.122'),
 (7, 'aortega', '1411305', '2022-07-05', '2022-07-05 14:57:50', '172.16.45.122'),
-(8, 'aortega', '1411305', '2022-07-05', '2022-07-05 14:58:14', '172.16.45.122');
+(8, 'aortega', '1411305', '2022-07-05', '2022-07-05 14:58:14', '172.16.45.122'),
+(9, 'fchoque', 'fchoque', '2022-07-17', '2022-07-17 20:58:14', '::1'),
+(10, 'fchoque', 'fchoque', '2022-07-17', '2022-07-17 20:58:33', '::1'),
+(11, 'lyapuchura', '486bdb5e547b0bbe2a8de7f15f596ad5b8f8abf6', '2022-07-17', '2022-07-17 21:03:09', '::1'),
+(12, 'lyaspuchura', '486bdb5e547b0bbe2a8de7f15f596ad5b8f8abf6', '2022-07-17', '2022-07-17 21:24:14', '::1'),
+(13, '‘or’1’=1', 'd21bb4e7ab94e5a9830eb1bfbf7b5a679a4fe88e', '2022-07-17', '2022-07-17 21:29:41', '::1'),
+(14, '‘or’1’=1', 'd21bb4e7ab94e5a9830eb1bfbf7b5a679a4fe88e', '2022-07-17', '2022-07-17 21:29:59', '::1'),
+(15, '‘or’1’=1', 'd21bb4e7ab94e5a9830eb1bfbf7b5a679a4fe88e', '2022-07-17', '2022-07-17 21:30:54', '::1');
 
 -- --------------------------------------------------------
 
@@ -1880,7 +2009,8 @@ INSERT INTO `nombres` (`idnombre`, `paterno`, `materno`, `nombres`, `casada`, `c
 (15, 'Calle', 'Poma', 'Luz Guadalupe', NULL, '9876885', 'LP', NULL, NULL),
 (16, 'Clavijo', 'Ponce', 'Edino Claudio ', NULL, '4374363 ', 'LP', NULL, NULL),
 (17, 'Arandia', 'Quiroga', 'Patricia Elizabeth', NULL, '5785844', 'TA', NULL, NULL),
-(18, 'Gutierrez', 'Guzman', 'Jaime Prudencio', NULL, '4507964', 'CBBA', NULL, NULL);
+(18, 'Gutierrez', 'Guzman', 'Jaime Prudencio', NULL, '4507964', 'CBBA', NULL, NULL),
+(19, 'Suarez', 'Jimenez', 'Olga Edith', NULL, '2389409', 'LP', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1928,6 +2058,26 @@ INSERT INTO `relacion_tuicion` (`idrelacion_tuicion`, `idlegajo`, `entidad`, `re
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `serie_documental`
+--
+
+CREATE TABLE `serie_documental` (
+  `idserie_documental` int(11) NOT NULL,
+  `serie_documental` varchar(45) NOT NULL,
+  `sigla` varchar(45) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `serie_documental`
+--
+
+INSERT INTO `serie_documental` (`idserie_documental`, `serie_documental`, `sigla`) VALUES
+(1, 'INFORME', 'INF'),
+(2, 'CORRESPONDENCIA', 'CORRESP');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `tipo_hojaruta`
 --
 
@@ -1961,7 +2111,7 @@ INSERT INTO `tipo_hojaruta` (`idtipo_hojaruta`, `idcontrol`, `tipo_hojaruta`) VA
 (17, 3, 'HOJA DE RUTA AMARILLA'),
 (18, 3, 'SOLICITUD DE INFORMACION O COPIAS LEGALIZADAS'),
 (19, 3, 'OTROS'),
-(20, 2, 'EVALUACIÓN DE INFORMES DE AUDITORIA'),
+(20, 2, 'EVALUACIÓN DE CONSISTENCIA DE INFORMES DE AUDITORÍA EXTERNA'),
 (21, 3, 'INFORMES DE AUDITORĪAS EXTERNAS'),
 (22, 1, 'INFORMES DE SEGUIMIENTO'),
 (23, 1, 'FORMATOS 1 Y 2'),
@@ -2298,25 +2448,26 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`idusuario`, `idnombre`, `usuario`, `password`, `fecha`, `condicion`, `perfil`, `idarea`, `idcargo`) VALUES
-(1, 1, 'lyapuchura', '5966306', '2022-04-21', 'ACTIVO', 'ADMINISTRADOR', 12, 43),
-(2, 2, 'wvargas', '599958-1S', '2022-04-21', 'ACTIVO', 'ADMINISTRADOR', 12, 41),
-(3, 13, 'svelasquez', '3457109', '2022-04-21', 'ACTIVO', 'USUARIO', 12, 42),
-(4, 3, 'emarquez', '4851906', '2022-04-21', 'ACTIVO', 'USUARIO', 12, 44),
-(5, 4, 'ecolque', '5268713', '2022-04-21', 'PASIVO', 'USUARIO', 12, 45),
-(6, 5, 'wherrera', '4060061', '2022-04-21', 'ACTIVO', 'USUARIO', 12, 46),
-(7, 6, 'pgarcia', '4903915', '2022-04-21', 'ACTIVO', 'USUARIO', 12, 47),
-(8, 7, 'aortega', '1411305-1M', '2022-04-21', 'ACTIVO', 'USUARIO', 12, 48),
-(9, 8, 'pmamani', '3074161', '2022-04-21', 'ACTIVO', 'USUARIO', 12, 49),
-(10, 9, 'oramos', '4333170', '2022-04-21', 'ACTIVO', 'USUARIO', 12, 50),
-(11, 10, 'jgomez', '6859478', '2022-04-21', 'ACTIVO', 'USUARIO', 12, 51),
-(12, 11, 'mtorrez', '2346006', '2022-04-21', 'PASIVO', 'USUARIO', 12, 52),
-(13, 12, 'nvelasquez', '9864651', '2022-04-21', 'ACTIVO', 'ADMINISTRADOR', 12, 53),
-(14, 14, 'fchoque', '7361168', '2022-06-08', 'ACTIVO', 'USUARIO', 12, 51),
-(15, 15, 'luz', '9876885', '2022-06-17', 'ACTIVO', 'USUARIO', 12, 52),
-(16, 16, 'eclavijo', 'eclavijo', '2022-06-17', 'ACTIVO', 'USUARIO', 28, 19),
-(17, 17, 'parandia', 'parandia', '2022-06-17', 'ACTIVO', 'USUARIO', 2, 31),
-(18, 18, 'jgutierrez', 'jgutierrez', '2022-06-23', 'ACTIVO', 'USUARIO', 12, 54),
-(19, 13, 'svelasquezb', '3457109', '2022-07-01', 'ACTIVO', 'USUARIO', 12, 55);
+(1, 1, 'lyapuchura', '486bdb5e547b0bbe2a8de7f15f596ad5b8f8abf6', '2022-04-21', 'ACTIVO', 'ADMINISTRADOR', 12, 43),
+(2, 2, 'wvargas', '4464addea7e3a399809add1b4047845a60fea19c', '2022-04-21', 'ACTIVO', 'ADMINISTRADOR', 12, 41),
+(3, 13, 'svelasquez', '48ade879fa1ef9fd2e212b2ffa70583fd9b284b5', '2022-04-21', 'ACTIVO', 'USUARIO', 12, 42),
+(4, 3, 'emarquez', '2b736854cf8ca4e940c4d49cc47b6510d084230b', '2022-04-21', 'ACTIVO', 'USUARIO', 12, 44),
+(5, 4, 'ecolque', '870d3ada3258208aa245221fc63ca2c8c71d9cff', '2022-04-21', 'PASIVO', 'USUARIO', 12, 45),
+(6, 5, 'wherrera', 'c2e9b29d79213ae84de97331531aca0959bd2e9c', '2022-04-21', 'ACTIVO', 'USUARIO', 12, 46),
+(7, 6, 'pgarcia', '3da09e32f351a7ef679fab9af4de30678aacec26', '2022-04-21', 'ACTIVO', 'USUARIO', 12, 47),
+(8, 7, 'aortega', 'a752de6ddf0dd34a7761a9e1c11120a26760df55', '2022-04-21', 'ACTIVO', 'USUARIO', 12, 48),
+(9, 8, 'pmamani', '1fa019bbf0c521eef3a9410b767cde189f189982', '2022-04-21', 'ACTIVO', 'USUARIO', 12, 49),
+(10, 9, 'oramos', '2fc315d2a4b63b8c07420bc3b1db5cd19e67c015', '2022-04-21', 'ACTIVO', 'USUARIO', 12, 50),
+(11, 10, 'jgomez', 'e3160b3799e82988f27d2cc8381f7ff65b045002', '2022-04-21', 'ACTIVO', 'USUARIO', 12, 45),
+(12, 11, 'mtorrez', '71662369fdd260927ebe145dad4bb9a01fab8945', '2022-04-21', 'PASIVO', 'USUARIO', 12, 52),
+(13, 12, 'nvelasquez', '21f9caae78a97441d3544f46b955b5ee318a41a8', '2022-04-21', 'ACTIVO', 'ADMINISTRADOR', 12, 53),
+(14, 14, 'fchoque', '21ef60e4ec17649b94eac22cd11872149db45dbd', '2022-06-08', 'ACTIVO', 'USUARIO', 12, 51),
+(15, 15, 'luz', 'ed38001f2a75c898e13a7233949f8f79d3593222', '2022-06-17', 'ACTIVO', 'USUARIO', 12, 52),
+(16, 16, 'eclavijo', '8d1bad6bd99b498fe7de1f397fe98bc82d35963d', '2022-06-17', 'ACTIVO', 'USUARIO', 28, 19),
+(17, 17, 'parandia', 'eb904d93227cd24571721f79ede4ac155eb9dfe4', '2022-06-17', 'ACTIVO', 'USUARIO', 2, 31),
+(18, 18, 'jgutierrez', '8225fb9f260f051c28d574916aead9ab91b182da', '2022-06-23', 'ACTIVO', 'USUARIO', 12, 54),
+(19, 13, 'svelasquezb', '9b684c88cb0fec8b55ccd209e79a3554bea02d1f', '2022-07-01', 'ACTIVO', 'USUARIO', 12, 55),
+(20, 19, 'osuarez', '71c52c35a17190723c73d3d407f54abbd50bb5c6', '2022-07-17', 'ACTIVO', 'USUARIO', 33, 56);
 
 --
 -- Índices para tablas volcadas
@@ -2371,6 +2522,12 @@ ALTER TABLE `corres`
   ADD PRIMARY KEY (`idcorres`);
 
 --
+-- Indices de la tabla `cubierta`
+--
+ALTER TABLE `cubierta`
+  ADD PRIMARY KEY (`idcubierta`);
+
+--
 -- Indices de la tabla `departamento`
 --
 ALTER TABLE `departamento`
@@ -2419,6 +2576,12 @@ ALTER TABLE `estructura_org`
   ADD PRIMARY KEY (`idestructura_org`);
 
 --
+-- Indices de la tabla `form_archivo`
+--
+ALTER TABLE `form_archivo`
+  ADD PRIMARY KEY (`idform_archivo`);
+
+--
 -- Indices de la tabla `historico_hr`
 --
 ALTER TABLE `historico_hr`
@@ -2429,6 +2592,12 @@ ALTER TABLE `historico_hr`
 --
 ALTER TABLE `instruccion`
   ADD PRIMARY KEY (`idinstruccion`);
+
+--
+-- Indices de la tabla `item_archivo`
+--
+ALTER TABLE `item_archivo`
+  ADD PRIMARY KEY (`iditem_archivo`);
 
 --
 -- Indices de la tabla `legajo`
@@ -2473,6 +2642,12 @@ ALTER TABLE `relacion_tuicion`
   ADD PRIMARY KEY (`idrelacion_tuicion`);
 
 --
+-- Indices de la tabla `serie_documental`
+--
+ALTER TABLE `serie_documental`
+  ADD PRIMARY KEY (`idserie_documental`);
+
+--
 -- Indices de la tabla `tipo_hojaruta`
 --
 ALTER TABLE `tipo_hojaruta`
@@ -2500,141 +2675,194 @@ ALTER TABLE `usuarios`
 --
 ALTER TABLE `area`
   MODIFY `idarea` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+
 --
 -- AUTO_INCREMENT de la tabla `bitacora_estado`
 --
 ALTER TABLE `bitacora_estado`
   MODIFY `idbitacora_estado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
 --
 -- AUTO_INCREMENT de la tabla `caracter`
 --
 ALTER TABLE `caracter`
   MODIFY `idcaracter` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
 --
 -- AUTO_INCREMENT de la tabla `cargo`
 --
 ALTER TABLE `cargo`
-  MODIFY `idcargo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+  MODIFY `idcargo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+
 --
 -- AUTO_INCREMENT de la tabla `categoria_archivo`
 --
 ALTER TABLE `categoria_archivo`
   MODIFY `idcategoria_archivo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
 --
 -- AUTO_INCREMENT de la tabla `condicion`
 --
 ALTER TABLE `condicion`
   MODIFY `idcondicion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
 --
 -- AUTO_INCREMENT de la tabla `control`
 --
 ALTER TABLE `control`
   MODIFY `idcontrol` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT de la tabla `corres`
 --
 ALTER TABLE `corres`
   MODIFY `idcorres` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=225;
+
+--
+-- AUTO_INCREMENT de la tabla `cubierta`
+--
+ALTER TABLE `cubierta`
+  MODIFY `idcubierta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
 --
 -- AUTO_INCREMENT de la tabla `departamento`
 --
 ALTER TABLE `departamento`
   MODIFY `iddepartamento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
 --
 -- AUTO_INCREMENT de la tabla `deriva_corres`
 --
 ALTER TABLE `deriva_corres`
   MODIFY `idderiva_corres` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=220;
+
 --
 -- AUTO_INCREMENT de la tabla `direccion`
 --
 ALTER TABLE `direccion`
   MODIFY `iddireccion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
 --
 -- AUTO_INCREMENT de la tabla `documento_adj`
 --
 ALTER TABLE `documento_adj`
   MODIFY `iddocumento_adj` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT de la tabla `empresa`
 --
 ALTER TABLE `empresa`
   MODIFY `idempresa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+
 --
 -- AUTO_INCREMENT de la tabla `entidad_archivo`
 --
 ALTER TABLE `entidad_archivo`
   MODIFY `identidad_archivo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
+
 --
 -- AUTO_INCREMENT de la tabla `estado`
 --
 ALTER TABLE `estado`
   MODIFY `idestado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
+
 --
 -- AUTO_INCREMENT de la tabla `estructura_org`
 --
 ALTER TABLE `estructura_org`
   MODIFY `idestructura_org` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT de la tabla `form_archivo`
+--
+ALTER TABLE `form_archivo`
+  MODIFY `idform_archivo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
 --
 -- AUTO_INCREMENT de la tabla `historico_hr`
 --
 ALTER TABLE `historico_hr`
   MODIFY `idhistorico_hr` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=383;
+
 --
 -- AUTO_INCREMENT de la tabla `instruccion`
 --
 ALTER TABLE `instruccion`
   MODIFY `idinstruccion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT de la tabla `item_archivo`
+--
+ALTER TABLE `item_archivo`
+  MODIFY `iditem_archivo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
 --
 -- AUTO_INCREMENT de la tabla `legajo`
 --
 ALTER TABLE `legajo`
-  MODIFY `idlegajo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `idlegajo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+
 --
 -- AUTO_INCREMENT de la tabla `legislacion`
 --
 ALTER TABLE `legislacion`
   MODIFY `idlegislacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
 --
 -- AUTO_INCREMENT de la tabla `log_login`
 --
 ALTER TABLE `log_login`
-  MODIFY `idlog_login` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=158;
+  MODIFY `idlog_login` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=181;
+
 --
 -- AUTO_INCREMENT de la tabla `log_login_failure`
 --
 ALTER TABLE `log_login_failure`
-  MODIFY `idlog_login_failure` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `idlog_login_failure` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
 --
 -- AUTO_INCREMENT de la tabla `nombres`
 --
 ALTER TABLE `nombres`
-  MODIFY `idnombre` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `idnombre` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
 --
 -- AUTO_INCREMENT de la tabla `perfil`
 --
 ALTER TABLE `perfil`
   MODIFY `idperfil` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
 --
 -- AUTO_INCREMENT de la tabla `relacion_tuicion`
 --
 ALTER TABLE `relacion_tuicion`
   MODIFY `idrelacion_tuicion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT de la tabla `serie_documental`
+--
+ALTER TABLE `serie_documental`
+  MODIFY `idserie_documental` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
 --
 -- AUTO_INCREMENT de la tabla `tipo_hojaruta`
 --
 ALTER TABLE `tipo_hojaruta`
   MODIFY `idtipo_hojaruta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+
 --
 -- AUTO_INCREMENT de la tabla `ubicacion_archivo`
 --
 ALTER TABLE `ubicacion_archivo`
   MODIFY `idubicacion_archivo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=289;
+
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `idusuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `idusuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
