@@ -16,14 +16,14 @@ $gestion      = date("Y");
 
 $idusuariod     = $_POST['idusuariod'];
 $idinstruccion  = $_POST['idinstruccion'];
-$comentario     = $_POST['comentario'];
+$comentario_conclusion  = $_POST['comentario_conclusion'];
 
 
 $sql3 = "UPDATE deriva_corres SET derivada='NO', recibida='NO' WHERE idderiva_corres='$idderiva_corres_ss'";
 $result3 = mysqli_query($link,$sql3);
 
 
-$sql7 = " UPDATE corres SET idestado='3' WHERE idcorres='$idcorres_ss' ";
+$sql7 = " UPDATE corres SET idestado='3' comentario_conclusion='$comentario_conclusion' WHERE idcorres='$idcorres_ss' ";
 $result7 = mysqli_query($link,$sql7);
 
 header("Location:mostrar_conclusion_hr.php");

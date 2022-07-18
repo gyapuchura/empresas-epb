@@ -73,14 +73,11 @@ $rowus = mysqli_fetch_array($resultus);
                     </button>
                   <a class="navbar-brand" href="inicio.php"><img src="img/logo.png" alt="logo"/></a>
                 </div>
-
                 <?php include("menu_corres.php");?>
-
             </div>
         </div>
-	</header>
+	</header> 
 	<!-- end header -->
-
 <section id="inner-headline">
 	<div class="container">
 		<div class="row">
@@ -93,11 +90,9 @@ $rowus = mysqli_fetch_array($resultus);
 <div class="container contenido">
 
 <div class="row" align="center"> 
-<div class="col-md-12"> 
-<h2>
-<form name="DERIVA" action="deriva_hoja_ruta_corres.php" method="post">
-  <button type="submit" class="btn-link">VOLVER</button></form>
-</h2></div>
+<div class="col-md-12"><h2>
+<a href="deriva_hoja_ruta_corres.php">VOLVER</a></h2>
+</div>
 </div>
 
 <div class="row" align="center">
@@ -117,9 +112,16 @@ $rowus = mysqli_fetch_array($resultus);
   <div class="col-md-2"><h4>FECHA:</h4></div>
   <div class="col-md-2"><h4 class="text-muted"><?php echo $row1[7];?></h4></div>
 </div>
-
+</div>
+<div class="row">
+</div>
+<div class="box-area">
+<div class="row">
+  <div class="col-md-4"><h4>COMENTARIO A LA CONCLUSIÓN DE LA H.R.:</h4></div>
+  <div class="col-md-8"><textarea class="form-control" rows="3" name="comentario"></textarea></div>
 </div>
 
+</div>
 <div class="row">
   <div class="col-md-12"><h4> </h4></div>
 </div>
