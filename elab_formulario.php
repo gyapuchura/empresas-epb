@@ -169,7 +169,7 @@ while ($field = mysqli_fetch_field($result)){
       </h5></td>
       <td>
             <form name="BORRA" action="elimina_item_archivo.php" method="post">
-            <input type="hidden" name="idlegislacion" value="<?php echo $row[0];?>">
+            <input type="hidden" name="iditem_archivo" value="<?php echo $row[0];?>">
             <button tipe="submit" class="btn-link"><h5 class="text-danger">QUITAR</h5></button>
             </form>                
       </td>

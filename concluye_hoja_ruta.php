@@ -106,26 +106,25 @@ $rowus = mysqli_fetch_array($resultus);
 
 <div class="row">
   <div class="col-md-2"><h4>PROCEDENCIA</h4></div>
-  <div class="col-md-2"><h4 class="text-muted"><?php echo $row1[5];?></h4></div>
+  <div class="col-md-4"><h4 class="text-muted"><?php echo $row1[5];?></h4></div>
   <div class="col-md-2"><h4>NUMERO DE CONTROL:</h4></div>
-  <div class="col-md-2"><h4 class="text-muted"><?php echo $row1[6];?></h4></div>
-  <div class="col-md-2"><h4>FECHA:</h4></div>
+  <div class="col-md-1"><h4 class="text-muted"><?php echo $row1[6];?></h4></div>
+  <div class="col-md-1"><h4>FECHA:</h4></div>
   <div class="col-md-2"><h4 class="text-muted"><?php echo $row1[7];?></h4></div>
 </div>
 </div>
 <div class="row">
 </div>
+<form name="CONCLUYE" action="guarda_conclusion_hr.php" method="post">
 <div class="box-area">
 <div class="row">
-  <div class="col-md-4"><h4>COMENTARIO A LA CONCLUSIÓN DE LA H.R.:</h4></div>
-  <div class="col-md-8"><textarea class="form-control" rows="3" name="comentario"></textarea></div>
+  <div class="col-md-4"><h4>COMENTARIO A LA CONCLUSIÓN DE LA HOJA DE RUTA:</h4></div>
+  <div class="col-md-8"><textarea class="form-control" rows="3" name="comentario_conclusion"></textarea></div>
 </div>
-
 </div>
 <div class="row">
   <div class="col-md-12"><h4> </h4></div>
 </div>
-
 <div class="row">
   <div class="col-md-12">  
   <button class="btn btn-primary" data-toggle="modal" data-target="#recibir">
@@ -138,22 +137,17 @@ CONCLUIR HOJA DE RUTA</button>
          <div class="panel panel-info">
   				<div class="panel-heading"><h3>¿Esta seguro de concluir esta HOJA DE RUTA?</h3></div>
          </div>
-
-         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">          
         </button>
       </div>
-
       <div class="modal-footer">
-
-      <form name="CONCLUYE" action="guarda_conclusion_hr.php" method="post">
         <button type="submit" class="btn btn-primary">CONCLUIR HOJA DE RUTA</button>
-        </form>
+        
       </div>
     </div>
   </div>
 </div>
- 
+</form>
 </div>
 
 </div>
@@ -170,20 +164,5 @@ CONCLUIR HOJA DE RUTA</button>
 	<script src="js/jquery.dataTables.min.js"></script>
 	<script src="js/script.js"></script>
 	<script src="js/dataTables.bootstrap.min.js"></script>
-	<script>
-	function agregaform(datos){
-d=datos.split('||');
-
-$('#codigo').val(d[0]);
-$('#tematica').val(d[1]);
-$('docente').val(d[2]);
-$('#adm').val(d[5]);
-$('#ejec').val(d[6]);
-$('#contrato').val(d[9]);
-$('#preventivo').val(d[8]);
-$('#creador').val(d[7]);
-
-}
-	</script>
 </body>
 </html>

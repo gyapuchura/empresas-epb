@@ -60,7 +60,7 @@
 		<!--   <li><a href="para_adjuntar.php">ADJUNTAR DOCUMENTO</a></li> -->  
 		<!--   <li><a href="historico.php">HISTORICO</a></li>  --> 
 		<?php
-		////////	/****** MODIFICAR DOCENTE ******/			    
+		////////	/****** GESTIONAR USUARIOS ******/			    
 		$sql = "SELECT perfil  from usuarios  where idusuario = '$idusuario_ss' and perfil = '$perfil_ss' ";
 		$result = mysqli_query($link,$sql);
 		$row = mysqli_fetch_array($result);
@@ -104,9 +104,29 @@
                         <a href="#" data-toggle="dropdown" class="dropdown-toggle">BUSQUEDAS<b class="caret"></b></a>
                         <ul class="dropdown-menu">
 						    <li><a href="busquedas.php">BÚSCAR HOJA DE RUTA</a></li>
-						    <li><a href="concluidas.php">HOJAS DE RUTA CONCLUIDAS</a></li>
+
+							<?php
+		////////	/****** GESTIONAR USUARIOS ******/			    
+		$sql = "SELECT perfil  from usuarios  where idusuario = '$idusuario_ss' and perfil = '$perfil_ss' ";
+		$result = mysqli_query($link,$sql);
+		$row = mysqli_fetch_array($result);
+
+		if ($row[0] == 'ADMINISTRADOR'){
+
+		mysqli_field_seek($result,0);
+		while ($field = mysqli_fetch_field($result)){
+		} do {
+	 ?>
+	 						<li><a href="concluidas.php">HOJAS DE RUTA CONCLUIDAS</a></li>
 							<li><a href="archivadas_hr.php">HOJAS DE RUTA ARCHIVADAS</a></li>
-                            <li><a href="ver_todo.php">VER TODA LA CORRESPONDENCIA</a></li>
+    <!--   <li><a href="modificar_comunicacion.php">MODIFICAR COMUNICACCION</a></li> --> 
+ <?php
+		} while ($row = mysqli_fetch_array($result));
+		} else {
+
+		}
+	?>
+                            <li><a href="ver_todo.php">IMPRIMIR INICIO</a></li>
 							<li><a href="seguimiento.php">SEGUIMIENTO GENERAL</a></li>
 							<li><a href="estadisticas_hr.php">ESTADISTICAS</a></li>
 							<li><a href="reportes.php">REPORTESS</a></li>

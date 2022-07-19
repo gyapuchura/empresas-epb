@@ -14,8 +14,6 @@ $idderiva_corres_ss = $_SESSION['idderiva_corres_ss'];
 
 $gestion      = date("Y");
 
-$idusuariod     = $_POST['idusuariod'];
-$idinstruccion  = $_POST['idinstruccion'];
 $comentario_conclusion  = $_POST['comentario_conclusion'];
 
 
@@ -23,7 +21,7 @@ $sql3 = "UPDATE deriva_corres SET derivada='NO', recibida='NO' WHERE idderiva_co
 $result3 = mysqli_query($link,$sql3);
 
 
-$sql7 = " UPDATE corres SET idestado='3' comentario_conclusion='$comentario_conclusion' WHERE idcorres='$idcorres_ss' ";
+$sql7 = " UPDATE corres SET idestado='3', comentario_conclusion='$comentario_conclusion' WHERE idcorres='$idcorres_ss' ";
 $result7 = mysqli_query($link,$sql7);
 
 header("Location:mostrar_conclusion_hr.php");

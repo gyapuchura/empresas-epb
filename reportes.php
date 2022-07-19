@@ -129,7 +129,7 @@ echo "No se encontraron usuarios";
 <div class="row">
 <div class="col-md-6"><h3> REPORTE DE USUARIOS POR ESTADOS </h3></div>
 <div class="col-md-6"><h3> <h4>
-  <a href="examples/column-basic/cantidad_usuario.php" target="_blank" onClick="window.open(this.href, this.target, 'width=1200,height=700,scrollbars=YES'); return false;">
+  <a href="estadisticas/cantidad_usuario.php" target="_blank" onClick="window.open(this.href, this.target, 'width=1200,height=700,scrollbars=YES'); return false;">
     MOSTRAR REPORTE </a></h4> </h3></div>
 </div>
 </div>

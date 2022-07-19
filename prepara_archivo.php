@@ -172,6 +172,12 @@ echo "No se encontraron resultados!";
 </div>
 
 <div class="row">
+  <div class="col-md-4"><h4>COMENTARIO (AL MOMENTO DE ARCHIVAR LA HOJA DE RUTA):</h4></div>
+  <div class="col-md-8"><textarea class="form-control" rows="3" name="comentario_archivo"></textarea></div>
+</div>
+
+
+<div class="row">
   <div class="col-md-3"><h4></h4></div>
   <div class="col-md-9">    
   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
